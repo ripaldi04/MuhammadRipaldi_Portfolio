@@ -21,94 +21,60 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">Sales Market Think</h2>
-            <p class="section-sub">Educational platform for sales and marketing training.</p>
-
-            <div class="project-gallery" style="column-count: 2; column-gap: 20px; margin: 30px 0;">
-                <div class="gallery-item"
-                    style="break-inside: avoid; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                    <img src="porto/Screenshot 2026-01-12 093142.png" alt="Sales Market Think"
-                        style="width: 100%; height: 220px; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item"
-                    style="break-inside: avoid; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                    <img src="porto/Screenshot 2026-01-12 120504.png" alt="Sales Training Courses"
-                        style="width: 100%; height: 180px; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item"
-                    style="break-inside: avoid; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                    <img src="porto/Screenshot 2026-01-12 120823.png" alt="Marketing Education"
-                        style="width: 100%; height: 200px; object-fit: cover; display: block;">
-                </div>
-                <div class="gallery-item"
-                    style="break-inside: avoid; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                    <img src="porto/Screenshot 2026-01-12 121016.png" alt="Business Training"
-                        style="width: 100%; height: 190px; object-fit: cover; display: block;">
-                </div>
-            </div>
+            <p class="section-sub">Digital Learning Platform with Multi-Tier Membership System.</p>
 
             <div class="project-description"
                 style="margin-top: 20px; color: rgba(255, 255, 255, .82); font-size: 0.75rem; line-height: 1.8;">
-                <h3 style="color: var(--accent); margin-bottom: 1rem;">Platform Edukasi Sales & Marketing</h3>
+                <h3 style="color: var(--accent); margin-bottom: 1rem;">Sistem Keanggotaan & Konten Eksklusif</h3>
 
                 <p style="margin-bottom: 1rem;">
-                    Sales Market Think adalah platform edukasi khusus untuk pembelajaran sales dan marketing. Platform
-                    ini menyediakan kursus-kursus komprehensif tentang teknik sales, strategi marketing, dan
-                    pengembangan bisnis untuk membantu profesional meningkatkan skill mereka.
+                    Proyek ini berfokus pada pengelolaan hak akses konten yang dinamis. Platform memisahkan antara
+                    pengguna umum (Guest), Member Gratis (Registered), dan Member Premium melalui sistem
+                    <strong>Paywall</strong> yang terintegrasi.
                 </p>
 
-                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Fitur Utama:</h4>
+                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Manajemen Akses Konten:</h4>
                 <ul style="margin-bottom: 1rem;">
-                    <li>Koleksi kursus sales dan marketing lengkap</li>
-                    <li>Learning management system dengan progress tracking</li>
-                    <li>Sertifikat penyelesaian kursus</li>
-                    <li>Forum diskusi antar peserta</li>
-                    <li>Webinar dan live training sessions</li>
-                    <li>Assessment dan quiz untuk evaluasi</li>
-                    <li>Community networking untuk professionals</li>
+                    <li><strong>Hybrid Article System:</strong> Artikel edukasi yang dapat diatur menjadi 'Public' (bisa
+                        dibaca siapa saja) atau 'Locked' (hanya untuk Member/Premium) guna meningkatkan strategi *lead
+                        magnet*.</li>
+                    <li><strong>Tiered Course Access:</strong> Kursus terbagi menjadi kategori Free dan Premium. Sistem
+                        secara otomatis membatasi akses video dan materi berdasarkan status langganan user.</li>
+                    <li><strong>Smart Redirect Paywall:</strong> Jika pengguna non-premium mencoba mengakses konten
+                        eksklusif, sistem akan secara otomatis mengarahkan mereka ke halaman *pricing* atau *checkout*.
+                    </li>
                 </ul>
 
-                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Teknologi yang Digunakan:</h4>
+                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Implementasi Laravel & MySQL:</h4>
                 <ul style="margin-bottom: 1rem;">
-                    <li>Frontend: Vue.js dengan component-based architecture</li>
-                    <li>Backend: Laravel dengan API-first approach</li>
-                    <li>Database: MySQL dengan optimized queries</li>
-                    <li>Video: AWS S3 untuk streaming video</li>
-                    <li>Payment: Midtrans payment gateway</li>
-                    <li>Analytics: Google Analytics dan custom tracking</li>
+                    <li><strong>Middleware Auth & Roles:</strong> Menggunakan Middleware Laravel untuk memfilter setiap
+                        request akses ke route premium secara aman.</li>
+                    <li><strong>Database Schema:</strong> Tabel <code>memberships</code> dan
+                        <code>access_controls</code> di MySQL yang menyimpan relasi antara user ID dan masa aktif paket
+                        premium mereka.
+                    </li>
+                    <li><strong>Gate & Policy:</strong> Logika otorisasi di level backend untuk memastikan konten tidak
+                        bisa diakses melalui manipulasi URL atau API.</li>
                 </ul>
 
-                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Yang Saya Lakukan:</h4>
+                <h4 style="color: var(--accent); margin: 1.5rem 0 0.5rem;">Kontribusi Utama:</h4>
                 <ul style="margin-bottom: 1rem;">
-                    <li>Design sistem pembelajaran yang scalable</li>
-                    <li>Implementasi video streaming dan progress tracking</li>
-                    <li>Membangun sistem sertifikasi otomatis</li>
-                    <li>Integrasi payment dan subscription model</li>
-                    <li>Optimasi performa untuk video content</li>
-                    <li>Development mobile-responsive interface</li>
+                    <li>Membangun logika **Subscription Lifecycle** (dari proses registrasi, pembayaran, hingga
+                        otomatisasi pencabutan akses saat masa berlaku habis).</li>
+                    <li>Implementasi fitur "Snippet Content" pada artikel, di mana pengunjung hanya bisa membaca
+                        sebagian teks sebelum diminta login/upgrade.</li>
+                    <li>Optimasi query MySQL untuk pengecekan status member yang cepat di setiap pemuatan halaman (page
+                        load).</li>
                 </ul>
-
-                <p>
-                    Platform ini telah berhasil membantu ribuan profesional di bidang sales dan marketing untuk
-                    meningkatkan kompetensi mereka melalui pembelajaran yang terstruktur dan berkualitas tinggi.
-                </p>
             </div>
 
             <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html#portfolio" class="btn outline">Kembali ke Portofolio</a>
                 <a href="https://salesmarkethink.com" target="_blank" rel="noopener noreferrer" class="btn primary"
-                    style="margin-right: 15px;">Visit Live Site</a>
-                <a href="index.html#portfolio" class="btn outline">Back to Portfolio</a>
+                    style="margin-right: 15px;">Kunjungi Situs</a>
             </div>
         </div>
     </section>
-
     <script>
         // ===== Scroll animations
         const observer = new IntersectionObserver((entries) => {
