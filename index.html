@@ -32,7 +32,7 @@
         </nav>
 
         <div style="display:flex; gap:10px; align-items:center;">
-          <button class="cta">Hire Me</button>
+          <a href="https://wa.me/0895613114144" target="_blank" class="cta">Hire Me</a>
 
           <button class="burger" id="burger" aria-label="menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -61,7 +61,7 @@
       <a href="#portfolio" onclick="closeDrawer()">Portfolio</a>
       <a href="#casestudy" onclick="closeDrawer()">Case Study</a>
       <a href="#certifications" onclick="closeDrawer()">Certifications</a>
-      <button class="cta" style="width:100%; margin-top:8px;">Hire Me</button>
+      <a href="https://wa.me/0895613114144" target="_blank" class="cta" style="width:100%; margin-top:8px;">Hire Me</a>
     </div>
   </div>
 
@@ -91,8 +91,8 @@
           </div>
 
           <div class="hero-actions">
-            <button class="btn primary">Hire Me</button>
-            <button class="btn outline">Download CV</button>
+            <a href="https://wa.me/0895613114144" target="_blank" class="btn primary">Hire Me</a>
+            <a href="document/Cv Muhammad Ripaldi.pdf" download class="btn outline">Download CV</a>
           </div>
 
           <div class="mini-stats">
@@ -148,14 +148,14 @@
             siap production.
 
             <div class="about-actions">
-              <button class="btn primary download">
+              <a href="document/Cv Muhammad Ripaldi.pdf" download class="btn primary download">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M12 3v12" />
                   <path d="M7 10l5 5 5-5" />
                   <path d="M5 21h14" />
                 </svg>
                 Download CV
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -404,76 +404,73 @@
       </p>
 
       <div class="case-studies-grid">
-        <!-- Studi Kasus 1 -->
         <div class="case-card">
-          <h3>Studi Kasus 1: Platform Ebook & Membership (Klaim/Beli + Otomatis Kirim)</h3>
+          <h3>Studi Kasus 1: Platform LMS & Paywall Membership (Sales Market Think)</h3>
 
           <h4>Masalah</h4>
           <p>
-            Dibutuhkan sistem yang bisa mengelola ebook dan akses membership, dengan alur klaim/beli yang rapi serta
-            pengiriman otomatis ke email dan WhatsApp.
+            Dibutuhkan sistem edukasi yang mampu membatasi akses konten (artikel & video) berdasarkan status langganan,
+            serta mengotomatisasi pengiriman sertifikat setelah kuis selesai.
           </p>
 
           <h4>Solusi</h4>
           <p>
-            Membangun fitur end-to-end: halaman listing & detail ebook, checkout/klaim, proses pembayaran, serta
-            otomatisasi
-            pengiriman link/akses melalui email/WA. Termasuk dashboard admin untuk mengelola konten dan data user.
+            Membangun sistem <strong>Role-Based Access Control (RBAC)</strong> menggunakan Middleware Laravel.
+            Mengintegrasikan <em>automated payment gateway</em> dan sistem <em>Drip Content</em> untuk memastikan materi
+            terbuka sesuai progres belajar user.
           </p>
 
           <h4>Hasil</h4>
           <p>
-            Alur user menjadi lebih cepat dan minim langkah manual; proses distribusi ebook berjalan otomatis dan
-            terpantau.
+            Konversi user gratis menjadi premium meningkat karena sistem <em>paywall</em> yang rapi; pengelolaan ribuan
+            member menjadi otomatis tanpa campur tangan admin manual.
           </p>
 
           <h4>Tantangan & Keputusan Teknis</h4>
           <p>
-            Menjaga konsistensi status transaksi dan pengiriman (misalnya via callback/webhook), serta memastikan
-            validasi
-            data dan keamanan akses link download.
+            Optimasi query <strong>MySQL</strong> untuk pengecekan status akses member di setiap halaman dan enkripsi
+            link video agar konten eksklusif tidak bisa diunduh secara ilegal.
           </p>
 
           <h4>Dampak</h4>
           <p>
-            Operasional lebih efisien, pengalaman pengguna lebih mulus, dan sistem lebih mudah dikembangkan untuk
-            skenario
-            promo/affiliate.
+            Menciptakan model bisnis <em>recurring income</em> yang stabil bagi klien dengan infrastruktur keamanan data
+            yang solid.
           </p>
         </div>
 
-        <!-- Studi Kasus 2 -->
         <div class="case-card">
-          <h3>Studi Kasus 2: Marketplace Kost & Villa (Booking, Harga Dinamis, dan Anti Double Booking)</h3>
+          <h3>Studi Kasus 2: Travel Haji & Umroh (Inventory & Verification System)</h3>
 
           <h4>Masalah</h4>
           <p>
-            Platform perlu menangani pencarian unit, booking berdasarkan tanggal/durasi, perhitungan harga dinamis,
-            serta
-            mencegah double booking pada unit yang sama.
+            Biro travel kesulitan mengelola kuota paket (seat) yang terbatas, validasi bukti transfer manual yang
+            menumpuk, serta manajemen dokumen paspor/vaksin jamaah yang berantakan.
           </p>
 
           <h4>Solusi</h4>
           <p>
-            Merancang struktur database dan alur booking yang jelas, termasuk pengecekan ketersediaan, kalkulasi harga,
-            status pembayaran, serta manajemen unit/room dan fasilitas.
+            Implementasi sistem <strong>Booking Locking</strong> di Laravel untuk mencegah <em>overselling</em> (double
+            booking). Menyediakan dashboard verifikasi keuangan dan modul manajemen manifes jamaah yang terintegrasi
+            dengan database MySQL.
           </p>
 
           <h4>Hasil</h4>
           <p>
-            Proses booking lebih terstruktur, data unit lebih rapi, dan resiko bentrok jadwal bisa diminimalkan.
+            Proses reservasi jamaah menjadi 100% transparan; admin dapat memvalidasi pembayaran dan kelengkapan dokumen
+            hanya dalam satu klik melalui dasbor sentral.
           </p>
 
           <h4>Tantangan & Keputusan Teknis</h4>
           <p>
-            Mendesain aturan konflik jadwal, mengunci proses booking saat pembayaran berjalan, dan menjaga integritas
-            data
-            melalui relasi dan transaksi.
+            Menangani integritas data saat ribuan jamaah mencoba melakukan booking bersamaan (Race Condition) dan
+            memastikan validasi <em>file upload</em> bukti bayar aman dari malware.
           </p>
 
           <h4>Dampak</h4>
           <p>
-            Mengurangi pembatalan karena jadwal bentrok dan meningkatkan kepercayaan user terhadap ketersediaan unit.
+            Meningkatkan kepercayaan jamaah melalui notifikasi real-time (WA/Email) dan mengurangi beban kerja
+            operasional kantor travel hingga 60%.
           </p>
         </div>
       </div>
