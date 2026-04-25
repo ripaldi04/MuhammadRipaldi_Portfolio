@@ -21,6 +21,8 @@
   <header class="nav">
     <div class="container">
       <div class="nav-inner">
+        <a href="https://wa.me/0895613114144" target="_blank" class="cta">Hire Me</a>
+
         <nav class="menu">
           <a class="active" href="#home">Home</a>
           <a href="#about">About me</a>
@@ -31,15 +33,11 @@
           <a href="#certifications">Certifications</a>
         </nav>
 
-        <div style="display:flex; gap:10px; align-items:center;">
-          <a href="https://wa.me/0895613114144" target="_blank" class="cta">Hire Me</a>
-
-          <button class="burger" id="burger" aria-label="menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+        <button class="burger" id="burger" aria-label="menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -92,7 +90,7 @@
 
           <div class="hero-actions">
             <a href="https://wa.me/0895613114144" target="_blank" class="btn primary">Hire Me</a>
-            <a href="document/Cv Muhammad Ripaldi.pdf" download class="btn outline">Download CV</a>
+            <a href="https://drive.google.com/drive/u/1/folders/1_CXTjZU8MI0ZYIzqSYpbEWcg31wUdS3t" target="_blank" class="btn outline">Lihat CV</a>
           </div>
 
           <div class="mini-stats">
@@ -563,18 +561,26 @@
   </div>
 
   <script>
-    // ===== Mobile drawer
-    const drawer = document.getElementById('drawer');
-    const burger = document.getElementById('burger');
-    const closeBtn = document.getElementById('closeDrawer');
+     // ===== Mobile drawer
+     const drawer = document.getElementById('drawer');
+     const burger = document.getElementById('burger');
+     const closeBtn = document.getElementById('closeDrawer');
 
-    function openDrawer() { drawer.classList.add('open'); }
-    function closeDrawer() { drawer.classList.remove('open'); }
-    window.closeDrawer = closeDrawer;
+     function openDrawer() {
+       drawer.classList.add('open');
+       burger.classList.add('active');
+     }
 
-    burger?.addEventListener('click', openDrawer);
-    closeBtn?.addEventListener('click', closeDrawer);
-    drawer?.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
+     function closeDrawer() {
+       drawer.classList.remove('open');
+       burger.classList.remove('active');
+     }
+
+     window.closeDrawer = closeDrawer;
+
+     burger?.addEventListener('click', openDrawer);
+     closeBtn?.addEventListener('click', closeDrawer);
+     drawer?.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
 
     // ===== Portfolio filter
     const filters = document.getElementById('filters');

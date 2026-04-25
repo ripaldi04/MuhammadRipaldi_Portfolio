@@ -135,18 +135,6 @@ button {
   border-radius: 99px;
 }
 
-.cta {
-  background: var(--accent);
-  color: #111;
-  border: none;
-  padding: 0.625rem 1rem;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.8125rem;
-  box-shadow: 0 10px 22px rgba(255, 122, 0, .25);
-  cursor: pointer;
-}
-
 .burger {
   display: none;
   width: 2.625rem;
@@ -158,11 +146,23 @@ button {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .15);
 }
 
 .burger svg {
   width: 1.25rem;
-  height: 1.25rem
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.burger.active svg {
+  transform: rotate(90deg);
 }
 
 /* ================= HERO ================= */
@@ -915,6 +915,14 @@ button {
     display: flex
   }
 
+  .nav-inner {
+    justify-content: space-between;
+  }
+
+  .nav-inner .cta {
+    display: block;
+  }
+
   .mini-stats {
     grid-template-columns: repeat(2, 1fr);
     max-width: 25rem;
@@ -967,13 +975,14 @@ button {
 .drawer {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .55);
+  background: rgba(0, 0, 0, .6);
   display: none;
   z-index: 999;
+  animation: fadeIn 0.2s ease-out;
 }
 
 .drawer.open {
-  display: block
+  display: block;
 }
 
 .drawer-panel {
@@ -984,23 +993,46 @@ button {
   height: 100%;
   background: #0f0f0f;
   border-left: 1px solid var(--line);
-  padding: 1rem;
+  padding: 1.25rem 1rem 1rem;
+  animation: slideInRight 0.3s ease-out;
 }
 
 .drawer-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.drawer-head .burger {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .drawer a {
-  display: block;
-  padding: 0.75rem 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0.875rem;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, .02);
   margin-bottom: 0.625rem;
   color: rgba(255, 255, 255, .88);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.drawer a:hover {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .12);
+  transform: translateX(-4px);
+}
+
+.drawer .cta {
+  width: 100%;
+  margin-top: 0.75rem;
+  text-align: center;
+  padding: 0.875rem 1rem;
 }
