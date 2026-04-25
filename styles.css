@@ -856,6 +856,14 @@ button {
     grid-template-columns: 1fr
   }
 
+  .hero-grid > div:first-child {
+    order: 2;
+  }
+
+  .hero-grid > div:last-child {
+    order: 1;
+  }
+
   .hero-photo-wrap {
     justify-content: center
   }
