@@ -135,6 +135,36 @@ button {
   border-radius: 99px;
 }
 
+.cta {
+  background: var(--accent);
+  color: #111;
+  border: none;
+  padding: 0.625rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  box-shadow: 0 10px 22px rgba(255, 122, 0, .35), 0 0 20px rgba(255, 122, 0, .15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(255, 122, 0, .45), 0 0 30px rgba(255, 122, 0, .25);
+}
+
 .burger {
   display: none;
   width: 2.625rem;
@@ -1035,4 +1065,20 @@ button {
   margin-top: 0.75rem;
   text-align: center;
   padding: 0.875rem 1rem;
+  box-shadow: 0 10px 22px rgba(255, 122, 0, .35), 0 0 20px rgba(255, 122, 0, .15);
+  position: relative;
+  overflow: hidden;
+}
+
+.drawer .cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  border-radius: 10px;
+}
+
+.drawer .cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(255, 122, 0, .45), 0 0 30px rgba(255, 122, 0, .25);
 }
