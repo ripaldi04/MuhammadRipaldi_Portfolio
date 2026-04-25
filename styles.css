@@ -551,16 +551,16 @@ button {
 }
 
 .pill {
-  padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  background: rgba(255, 255, 255, .03);
-  color: rgba(255, 255, 255, .82);
-  font-size: 0.6875rem;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s ease;
-}
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .03);
+    color: rgba(255, 255, 255, .82);
+    font-size: 0.625rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
 
 .pill:hover {
   background: rgba(255, 255, 255, .1);
@@ -937,7 +937,7 @@ button {
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: 1fr
   }
 
   .form-grid {
