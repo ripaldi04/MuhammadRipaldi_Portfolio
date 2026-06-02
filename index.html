@@ -44,22 +44,22 @@
 
   <!-- Mobile Drawer -->
   <div class="drawer" id="drawer">
-      <div class="drawer-panel">
-        <div class="drawer-head">
-          <button class="burger" id="closeDrawer" aria-label="close">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 6l12 12M18 6l-12 12" />
-            </svg>
-          </button>
-        </div>
-        <a href="#home" onclick="closeDrawer()">Home</a>
-        <a href="#skill" onclick="closeDrawer()">Skills</a>
-        <a href="#about" onclick="closeDrawer()">About me</a>
-        <a href="#techStack" onclick="closeDrawer()">Tech Stack</a>
-        <a href="#portfolio" onclick="closeDrawer()">Portfolio</a>
-        <a href="#casestudy" onclick="closeDrawer()">Case Study</a>
-        <a href="#certifications" onclick="closeDrawer()">Certifications</a>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <button class="burger" id="closeDrawer" aria-label="close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M18 6l-12 12" />
+          </svg>
+        </button>
       </div>
+      <a href="#home" onclick="closeDrawer()">Home</a>
+      <a href="#skill" onclick="closeDrawer()">Skills</a>
+      <a href="#about" onclick="closeDrawer()">About me</a>
+      <a href="#techStack" onclick="closeDrawer()">Tech Stack</a>
+      <a href="#portfolio" onclick="closeDrawer()">Portfolio</a>
+      <a href="#casestudy" onclick="closeDrawer()">Case Study</a>
+      <a href="#certifications" onclick="closeDrawer()">Certifications</a>
+    </div>
   </div>
 
   <!-- HERO -->
@@ -88,7 +88,8 @@
 
           <div class="hero-actions">
             <a href="https://wa.me/0895613114144" target="_blank" class="btn primary">Hire Me</a>
-            <a href="https://drive.google.com/drive/u/1/folders/1_CXTjZU8MI0ZYIzqSYpbEWcg31wUdS3t" target="_blank" class="btn outline">Lihat CV</a>
+            <a href="https://drive.google.com/drive/u/1/folders/1_CXTjZU8MI0ZYIzqSYpbEWcg31wUdS3t" target="_blank"
+              class="btn outline">Lihat CV</a>
           </div>
 
           <div class="mini-stats">
@@ -134,15 +135,13 @@
 
         <div>
           <div class="about-text">
-            Saya adalah Fullstack Web Developer yang terbiasa mengerjakan pengembangan aplikasi web dari awal hingga
-            siap digunakan. Saya menggabungkan desain antarmuka yang nyaman dipakai dengan backend yang kuat, aman, dan
-            mudah dipelihara.
+            I am an IT Developer experienced in building web applications from the ground up, ensuring they are
+            production-ready. I bridge the gap between user-centric interface design and robust, secure, and
+            maintainable backend systems.
             <br><br>
-            Dalam proses kerja, saya fokus pada struktur kode yang rapi, performa, serta kebutuhan bisnis dan pengguna.
-            Mulai dari membangun UI yang responsif dan logika aplikasi, hingga merancang database dan
-            integrasi layanan pihak ketiga semuanya saya kerjakan secara terukur agar hasilnya stabil, scalable, dan
-            siap production.
-
+            My development process focuses on clean code, performance, and aligning technical solutions with business
+            and user needs. From crafting responsive UIs and application logic to architecting databases and integrating
+            third-party services, I ensure every project is built to be stable, scalable, and ready for deployment.
             <div class="about-actions">
               <a href="document/Cv Muhammad Ripaldi.pdf" download class="btn primary download">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -559,26 +558,26 @@
   </div>
 
   <script>
-     // ===== Mobile drawer
-     const drawer = document.getElementById('drawer');
-     const burger = document.getElementById('burger');
-     const closeBtn = document.getElementById('closeDrawer');
+    // ===== Mobile drawer
+    const drawer = document.getElementById('drawer');
+    const burger = document.getElementById('burger');
+    const closeBtn = document.getElementById('closeDrawer');
 
-     function openDrawer() {
-       drawer.classList.add('open');
-       burger.classList.add('active');
-     }
+    function openDrawer() {
+      drawer.classList.add('open');
+      burger.classList.add('active');
+    }
 
-     function closeDrawer() {
-       drawer.classList.remove('open');
-       burger.classList.remove('active');
-     }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      burger.classList.remove('active');
+    }
 
-     window.closeDrawer = closeDrawer;
+    window.closeDrawer = closeDrawer;
 
-     burger?.addEventListener('click', openDrawer);
-     closeBtn?.addEventListener('click', closeDrawer);
-     drawer?.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
+    burger?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    drawer?.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
 
     // ===== Portfolio filter
     const filters = document.getElementById('filters');
